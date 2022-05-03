@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <h1 class="mx-auto">Apache log parser</h1>
+
+    <div class="row mt-5">
+        {% for elem in ips %}
+            <div class="col-6">{{ elem['ip'] }}</div>
+            <div class="col-6">{{ elem['frequency'] }}</div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
