@@ -10,7 +10,6 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     data = open('/var/log/apache2/access.log').read()
-    # data = open('access.log').read()
 
     pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
     ips = re.findall(pattern, data)
@@ -26,5 +25,4 @@ def index():
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
     app.run(host='0.0.0.0')
