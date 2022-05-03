@@ -21,7 +21,7 @@ def index():
         if value > 1:
             ban.append({'ip': key, 'frequency': value})
 
-    return render_template('index2.html', ips=ban)
+    return render_template('index.html', ips=ban)
 
 
 if __name__ == '__main__':
