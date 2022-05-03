@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    data = open('/var/log/apache2/access.log').read()
+    data = open('/var/log/nginx/access.log').read()
 
     pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
     ips = re.findall(pattern, data)
